@@ -33,5 +33,6 @@ def parse_comments(link):
         i += 1
 
 
-for l in get_links(30):
-    parse_comments(l)
+if __name__ == '__main__':
+    for l in get_links(30):
+        parse_comments(l)
