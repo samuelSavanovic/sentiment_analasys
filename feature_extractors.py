@@ -35,8 +35,9 @@ def features_all(text):
     return all
 
 
-comments, dates = parse_comments(get_links(1)[0])
-all = features_all(comments[0])
+if __name__ == "__main__":
+    comments, dates = parse_comments(get_links(1)[0])
+    all_features = features_all(comments[0])
 
-for k, v in all.items():
-    print(k, v)
+    for k, v in all_features.items():
+        print(k, v)
