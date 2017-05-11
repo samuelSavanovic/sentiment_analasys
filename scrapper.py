@@ -4,7 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 
 from english_checker import is_english_text
-from get_books import get_links
 
 
 def parse_comments(link):
@@ -18,22 +17,19 @@ def parse_comments(link):
     comments.pop(len(comments) // 2)
 
     comments_text = []
-
-    f = open('comments.txt', 'a')
+    date_text = []
+    # f = open('comments.txt', 'a')
     i = 0
     for l in comments:
         text = l.get_text()
         if is_english_text(text, 40.0):
             comments_text.append(text)
-            f.write(date[i].get_text())
-            f.write('\n')
-            f.write(l.get_text())
-            f.write("\n\n")
+            date_text.append(date[i].get_text())
+            # f.write(date[i].get_text())
+            # f.write('\n')
+            # f.write(l.get_text())
+            #f.write("\n\n")
 
         i += 1
-    f.close()
-
-
-if __name__ == '__main__':
-    for l in get_links(30):
-        parse_comments(l)
+    # f.close()
+    return comments_text, date_text
