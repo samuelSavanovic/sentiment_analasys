@@ -31,6 +31,7 @@ def parse_comments(link):
             f.write("\n\n")
 
         i += 1
+    f.close()
 
 
 if __name__ == '__main__':
