@@ -4,13 +4,13 @@ from scrapper import parse_comments
 
 
 def features(words, text):
-    freqs = {}
+    feats = {}
     for word in words:
         word = word.lower()
         count = text.count(word)
         if count > 0:
-            freqs[word] = count * int(words[word])
-    return freqs
+            feats[word] = count * int(words[word])
+    return feats
 
 
 def features_pos(text):
