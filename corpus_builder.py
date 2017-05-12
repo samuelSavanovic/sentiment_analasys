@@ -9,6 +9,6 @@ if __name__ == "__main__":
         for comment in comments:
             print(comment)
             is_pos = input("pos/neg?")
-            with open("corpora/" + is_pos + "_" + book_name + "_" + dates[i] + "_" + str(i) + ".txt", "w") as f:
+            with open("corpus/" + is_pos + "_" + book_name + "_" + dates[i] + "_" + str(i) + ".txt", "w") as f:
                 f.write(comment)
             i += 1

@@ -1,8 +1,9 @@
-This corpora contains 201 comments(642.4 KiB, 138693 words) on 10 books from www.goodreads.com classified into 2 classes.
-Comments were downloaded then manually classified into positive and negative class using corpora_builder.py on
+This corpus contains 201 english(non-english comments were removed using functions from english_checker.py)
+comments(642.4 KiB, 138693 words) on 10 books from www.goodreads.com classified into 2 classes.
+Comments were downloaded then manually classified into positive and negative class using corpus_builder.py on
 May 12th 2017. Comments are parsed from html using parse_comments in scrapper.py. Book links were parsed from list of
 best classics of 20th century http://www.goodreads.com/list/show/6.Best_Books_of_the_20th_Centur using get_links from
 goodreads_books.py, book links have structure od domain/book/show/id.bookName for e.g http://www.goodreads.com/book/show/5470.1984
 where 5470 is id, 1984 is name of the book. Book names are extracted from links in process of building the corpus in
-corpora_builder.py.
+corpus_builder.py.
 

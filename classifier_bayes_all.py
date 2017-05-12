@@ -5,7 +5,7 @@ from nltk.corpus import PlaintextCorpusReader
 
 from feature_extractors import features_all
 
-corpus_root = 'corpora/'
+corpus_root = 'corpus/'
 wordlists = PlaintextCorpusReader(corpus_root, '.*')
 
 
