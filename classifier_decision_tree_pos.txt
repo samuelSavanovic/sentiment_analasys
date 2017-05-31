@@ -1,16 +1,16 @@
-Accuracy: 0.7619047619047619
+Accuracy: 0.8571428571428571
 want
-novel
-liking
-enjoy
-chance
-cares
-vision
-funky
-popular
-right
-growing
+worth
 lol
-important
-survived
-hoping
+awards
+mercy
+cares
+thanks
+vision
+like
+novel
+benefit
+good
+chance
+love
+solid

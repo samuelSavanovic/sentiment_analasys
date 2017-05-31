@@ -1,0 +1,16 @@
+Accuracy: 0.7619047619047619
+lol pos
+worse neg
+like pos
+survived pos
+reached pos
+leave neg
+favorite pos
+worth pos
+innovation pos
+hoping pos
+avoid neg
+sigh neg
+free pos
+censor neg
+dead neg
