@@ -1,0 +1,16 @@
+Accuracy: 0.7619047619047619
+want
+novel
+liking
+enjoy
+chance
+cares
+vision
+funky
+popular
+right
+growing
+lol
+important
+survived
+hoping

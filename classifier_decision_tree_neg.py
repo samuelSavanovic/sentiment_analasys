@@ -3,12 +3,12 @@ import nltk
 from decision_tree_most_informative_features import most_informative_features
 from feature_set_builder import get_feature_set
 
-train_set, test_set = get_feature_set("all")
+train_set, test_set = get_feature_set("neg")
 classifier = nltk.DecisionTreeClassifier.train(train_set)
 features = most_informative_features(classifier, 15)
 
-with open("classifier_decision_tree_all.txt", "w") as f:
+with open("classifier_decision_tree_neg.txt", "w") as f:
     f.write("Accuracy: " + str(nltk.classify.accuracy(classifier, test_set)))
     f.write("\n")
     for k in features:
-        f.write(k.split('_')[0] + " " + k.split('_')[-1] + "\n")
+        f.write(k.split('_')[0] + "\n")
