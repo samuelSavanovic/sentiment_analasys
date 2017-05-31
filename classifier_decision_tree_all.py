@@ -1,36 +1,7 @@
-import random
-
 import nltk
-from nltk.corpus import PlaintextCorpusReader
 
-from feature_extractors import features_all
+from feature_set_builder import get_feature_set
 
-corpus_root = 'corpus/'
-wordlists = PlaintextCorpusReader(corpus_root, '.*')
-
-
-def category(fileid):
-    if fileid.startswith("pos_"):
-        return "P"
-    else:
-        return "N"
-
-
-documents = [(wordlists.words(fileid), cat)
-             for fileid in wordlists.fileids()
-             for cat in category(fileid)]
-
-random.shuffle(documents)
-featuresets = [(features_all(d), c) for (d, c) in documents]
-nine = int(0.9 * len(featuresets))
-train_set, test_set = featuresets[:nine], featuresets[nine:]
+train_set, test_set = get_feature_set("all")
 classifier = nltk.DecisionTreeClassifier.train(train_set)
 print(nltk.classify.accuracy(classifier, test_set))
-
-'''
-with open("classifier_decision_tree_all_all.txt", "w") as f:
-    f.write("Accuracy: " + str(nltk.classify.accuracy(classifier, test_set)))
-    f.write("\n")
-    for k, v in classifier.most_informative_features(15):
-        f.write(k.split('_')[0] + " " + k.split('_')[-1] + "\n")
-'''
