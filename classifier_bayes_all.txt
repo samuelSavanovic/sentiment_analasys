@@ -1,0 +1,16 @@
+Accuracy: 0.7142857142857143
+kills neg
+like pos
+awful neg
+mistakes neg
+shares pos
+encourage pos
+crap neg
+regard pos
+disgust neg
+ambitious pos
+retained neg
+successful pos
+benefit pos
+matters pos
+exposed neg

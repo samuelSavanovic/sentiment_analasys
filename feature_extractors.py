@@ -1,43 +1,33 @@
-from goodreads_books import get_links
-from reader import positive_words, negative_words
-from scrapper import parse_comments
-
-
-def features(words, text):
-    feats = {}
-    for word in words:
-        word = word.lower()
-        count = text.count(word)
-        if count > 0:
-            feats[word] = count * int(words[word])
-    return feats
-
-
-def features_pos(text):
-    return features(positive_words, text)
+from reader import positive_words, negative_words, all_words
 
 
 def features_neg(text):
-    return features(negative_words, text)
+    return __create_features_from_text(text, negative_words)
+
+
+def features_pos(text):
+    return __create_features_from_text(text, positive_words)
 
 
 def features_all(text):
-    positive = features(positive_words, text)
-    negative = features(negative_words, text)
-    suf_p = list(map(lambda x: x + "_pos", positive))
-    suf_n = list(map(lambda x: x + "_neg", negative))
-    for s in suf_p:
-        positive[s] = positive.pop(s[0:-4])
-    for s in suf_n:
-        negative[s] = negative.pop(s[0:-4])
-    all = positive.copy()
-    all.update(negative)
-    return all
+    return __create_features_from_text(text, all_words)
 
 
-if __name__ == "__main__":
-    comments, dates = parse_comments(get_links(1)[0])
-    all_features = features_all(comments[0])
+def __create_features_from_text(text, feature_space):
+    extracted_dict = {}
+    features = set(text).intersection(feature_space)
 
-    for k, v in all_features.items():
-        print(k, v)
+    is_all_dict = feature_space == all_words
+
+    for feature in features:
+        count = text.count(feature)
+        if is_all_dict:
+            polarity, value = all_words[feature]
+            key_name = feature + '_' + polarity
+        else:
+            value = int(feature_space[feature])
+            key_name = feature
+
+        extracted_dict[key_name] = value * count
+
+    return extracted_dict
