@@ -1,7 +1,7 @@
 import nltk
 
-from decision_tree_most_informative_features import most_informative_features
-from feature_set_builder import get_feature_set
+from classifiers.decision_tree_most_informative_features import most_informative_features
+from features.feature_set_builder import get_feature_set
 
 train_set, test_set = get_feature_set("all")
 classifier = nltk.DecisionTreeClassifier.train(train_set)

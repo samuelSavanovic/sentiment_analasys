@@ -1,0 +1,16 @@
+Accuracy: 0.6666666666666666
+lame neg
+benefit pos
+stupid neg
+awful neg
+annoys neg
+loose neg
+refuse neg
+disappointment neg
+no neg
+dream pos
+popular pos
+shit neg
+worst neg
+survived pos
+censor neg

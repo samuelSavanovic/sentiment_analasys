@@ -1,0 +1,16 @@
+Accuracy: 0.7142857142857143
+kills neg
+sympathy pos
+inability neg
+disappointment neg
+benefit pos
+matters pos
+like pos
+like pos
+shares pos
+fed neg
+apology pos
+endorsement pos
+welcome pos
+disgust neg
+retained neg

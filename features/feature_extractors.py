@@ -1,4 +1,4 @@
-from reader import positive_words, negative_words, all_words
+from features.reader import positive_words, negative_words, all_words
 
 
 def features_neg(text):

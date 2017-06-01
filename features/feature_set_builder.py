@@ -2,11 +2,10 @@ import random
 
 from nltk.corpus import PlaintextCorpusReader
 
-from feature_extractors import *
+from features.feature_extractors import *
 
-corpus_root = 'corpus/'
+corpus_root = '../corpus'
 wordlists = PlaintextCorpusReader(corpus_root, '.*')
-
 
 def get_feature_set(feature_space):
     if feature_space == "pos":
@@ -33,3 +32,7 @@ def __feature_sets(f):
     featuresets = [(f(d), c) for (d, c) in documents]
     nine = int(0.9 * len(featuresets))
     return (featuresets[:nine], featuresets[nine:])
+
+
+if __name__ == "__main__":
+    print("Number of tokens: ", len(set(wordlists.words())))

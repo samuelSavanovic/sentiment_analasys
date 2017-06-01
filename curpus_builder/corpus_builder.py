@@ -1,5 +1,5 @@
-from goodreads_books import get_links
-from scrapper import parse_comments
+from scraping.goodreads_books import get_links
+from scraping.scrapper import parse_comments
 
 if __name__ == "__main__":
     for l in get_links(10):

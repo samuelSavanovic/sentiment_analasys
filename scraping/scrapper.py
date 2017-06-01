@@ -3,7 +3,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from english_checker import is_english_text
+from scraping.english_checker import is_english_text
 
 
 def parse_comments(link):

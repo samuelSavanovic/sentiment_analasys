@@ -1,5 +1,5 @@
 This corpus contains 201 english(non-english comments were removed using functions from english_checker.py)
-comments(642.4 KiB, 138693 words) on 10 books from www.goodreads.com classified into 2 classes.
+comments(642.4 KiB, 138693 words, 12802 tokens) on 10 books from www.goodreads.com classified into 2 classes.
 Comments were downloaded then manually classified into positive and negative class using corpus_builder.py on
 May 12th 2017. Comments are parsed from html using parse_comments in scrapper.py. Book links were parsed from list of
 best classics of 20th century http://www.goodreads.com/list/show/6.Best_Books_of_the_20th_Centur using get_links from

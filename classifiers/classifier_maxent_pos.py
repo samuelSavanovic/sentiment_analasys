@@ -1,7 +1,7 @@
 import nltk
 
-from feature_set_builder import get_feature_set
-from maxent_most_informative_features import most_informative_features
+from classifiers.maxent_most_informative_features import most_informative_features
+from features.feature_set_builder import get_feature_set
 
 train_set, test_set = get_feature_set("pos")
 classifier = nltk.MaxentClassifier.train(train_set)
